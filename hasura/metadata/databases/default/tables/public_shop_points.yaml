@@ -1,0 +1,3 @@
+table:
+  name: shop_points
+  schema: public

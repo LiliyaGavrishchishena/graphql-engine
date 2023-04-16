@@ -1,0 +1,2 @@
+CREATE TABLE "public"."shop_points" ("shop_id" uuid NOT NULL DEFAULT gen_random_uuid(), "shop_type" text NOT NULL, "size" integer NOT NULL, "rent_fee" integer, "utilities_fee" integer, "shelf_count" integer, PRIMARY KEY ("shop_id") , FOREIGN KEY ("shop_type") REFERENCES "public"."shop_type"("name") ON UPDATE set default ON DELETE set default, UNIQUE ("shop_id"));
+CREATE EXTENSION IF NOT EXISTS pgcrypto;
